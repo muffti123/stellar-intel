@@ -20,13 +20,13 @@ export interface Stat {
  */
 export function StatBar({ stats }: { stats: Stat[] }) {
   return (
-    <section className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/50">
+    <section className="rounded-xl border border-border bg-bg-subtle p-4">
       {stats.map(({ icon: Icon, value, label }) => (
         <div key={label} className="flex items-center gap-3">
-          <Icon className="h-5 w-5 text-blue-600" />
+          <Icon className="h-5 w-5 text-accent" />
           <div>
-            <div className="text-xl font-bold text-gray-900 dark:text-white">{value}</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
+            <div className="text-xl font-bold text-primary-text">{value}</div>
+            <div className="text-xs text-secondary-text">{label}</div>
           </div>
         </div>
       ))}
